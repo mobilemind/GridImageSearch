@@ -25,11 +25,11 @@ Time Spent: 3.75 hours
 7. [ ] Use the ActionBar SearchView or custom layout as the query box instead of an EditText
 8. [ ] User can share an image to their friends or email it to themselves
 9. [ ] Robust error handling, _check if internet is available_ (implemented!), handle error cases, network failures
-10. [ ] Optional: Improve the user interface and experiment with image assets and/or styling and coloring
-11. [ ]  __Bonus__: Replace Filter Settings Activity with a lightweight modal overlay
-12. [ ]  __Bonus__: User can zoom or pan images displayed in full-screen detail view
-13. [ ]  __Bonus__: Use the StaggeredGridView to display visually interesting image results
-14. [ ]  __Bonus__: Allow user to view all comments for an image within a separate screen or a dialog fragment
+10. [ ] Improve the user interface and experiment with image assets and/or styling and coloring
+11. [ ] __Bonus__: Replace Filter Settings Activity with a lightweight modal overlay
+12. [ ] __Bonus__: User can zoom or pan images displayed in full-screen detail view
+13. [ ] __Bonus__: Use the StaggeredGridView to display visually interesting image results
+14. [ ] __Bonus__: Allow user to view all comments for an image within a separate screen or a dialog fragment
 
 ## Walkthroughs
 

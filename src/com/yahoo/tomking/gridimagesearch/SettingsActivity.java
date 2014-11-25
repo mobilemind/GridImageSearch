@@ -12,14 +12,14 @@ import com.yahoo.tomking.gridimagesearch.R;
 import com.yahoo.tomking.gridimagesearch.Settings;
 
 public class SettingsActivity extends Activity {
-	private static final String NONE_SELECTED = "None Selected";
+	private static final String kNONE_SELECTED = "None Selected";
 	private Settings settings;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_settings);
-		settings = (Settings) getIntent().getSerializableExtra(Settings.SETTINGS);
+		settings = (Settings) getIntent().getSerializableExtra(Settings.kSETTINGS);
 		setSelectedEditText(settings.siteFilter, R.id.et_site_filter);
 		setSelectedSpinnerValue(settings.colorFilter, R.id.sp_color_filter);
 		setSelectedSpinnerValue(settings.imageSize, R.id.sp_image_size);
@@ -59,7 +59,7 @@ public class SettingsActivity extends Activity {
 		settings.colorFilter = getSpinnerData(R.id.sp_color_filter);
 
 		Intent i = new Intent();
-		i.putExtra(Settings.SETTINGS, settings);
+		i.putExtra(Settings.kSETTINGS, settings);
 		setResult(RESULT_OK, i);
 		finish();
 	}
@@ -67,7 +67,7 @@ public class SettingsActivity extends Activity {
 	private String getEditTextData(int id) {
 		EditText editText = (EditText) findViewById(id);
 		String etData = editText.getText().toString();
-		if (etData == null || NONE_SELECTED.equals(etData)) {
+		if (etData == null || kNONE_SELECTED.equals(etData)) {
 			return "";
 		}
 		return etData;
@@ -76,7 +76,7 @@ public class SettingsActivity extends Activity {
 	private String getSpinnerData(int id) {
 		Spinner spinner = (Spinner) findViewById(id);
 		String spinnerData = spinner.getSelectedItem().toString();
-		if (spinnerData == null || NONE_SELECTED.equals(spinnerData)) {
+		if (spinnerData == null || kNONE_SELECTED.equals(spinnerData)) {
 			return "";
 		}
 		return spinnerData;

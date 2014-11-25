@@ -28,9 +28,9 @@ import com.yahoo.tomking.gridimagesearch.ImageResult;
 import com.yahoo.tomking.gridimagesearch.Settings;
 
 public class ImageSearchActivity extends Activity {
-	private static final String RESULT = "result";
-	private static final int REQUEST_CODE = 0;
-	private static final int RESULTS_PER_REQUEST = 8;
+	private static final String kRESULT = "result";
+	private static final int kREQUEST_CODE = 0;
+	private static final int kRESULTS_PER_REQUEST = 8;
 	private EditText etQuery;
 	private GridView gvResults;
 	private ArrayList<ImageResult> imageResults;
@@ -51,7 +51,7 @@ public class ImageSearchActivity extends Activity {
 				// Get the image result to display
 				ImageResult result = imageResults.get(position);
 				// pass the image result into the intent
-				i.putExtra(RESULT, result);
+				i.putExtra(kRESULT, result);
 				// launch the new activity
 				startActivity(i);
 			}
@@ -124,7 +124,7 @@ public class ImageSearchActivity extends Activity {
 
 	private void setupSettings() {
 		this.settings = (Settings) this.getIntent().getSerializableExtra(
-				Settings.SETTINGS);
+				Settings.kSETTINGS);
 		if (this.settings == null) {
 			this.settings = new Settings();
 		}
@@ -155,9 +155,9 @@ public class ImageSearchActivity extends Activity {
 		// Create Intent
 		Intent i = new Intent(this, SettingsActivity.class);
 		// pass any arguments
-		i.putExtra(Settings.SETTINGS, settings);
+		i.putExtra(Settings.kSETTINGS, settings);
 		// execute Intent startActivityForResult
-		startActivityForResult(i, REQUEST_CODE);
+		startActivityForResult(i, kREQUEST_CODE);
 	}
 
 	private String buildSearchUrl(int page) {
@@ -176,11 +176,11 @@ public class ImageSearchActivity extends Activity {
 	}
 
 	private String buildResultCountParameter() {
-		return "&rsz=" + RESULTS_PER_REQUEST;
+		return "&rsz=" + kRESULTS_PER_REQUEST;
 	}
 
 	private String buildPageParameter(int page) {
-		return "&start=" + page * RESULTS_PER_REQUEST;
+		return "&start=" + page * kRESULTS_PER_REQUEST;
 	}
 
 	private String buildColorFilterParameter() {
@@ -206,10 +206,10 @@ public class ImageSearchActivity extends Activity {
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		if (requestCode == REQUEST_CODE) {
+		if (requestCode == kREQUEST_CODE) {
 			if (resultCode == RESULT_OK) {
 				Settings settings = (Settings) data
-						.getSerializableExtra(Settings.SETTINGS);
+						.getSerializableExtra(Settings.kSETTINGS);
 				this.settings = settings;
 			}
 		}

@@ -9,7 +9,7 @@ import org.json.JSONObject;
 
 public class ImageResult implements Serializable{
 
-	private static final long serialVersionUID = 4346781548931842186L;
+	private static final long serialVersionUID = 1L;
 	public String fullUrl;
 	public String thumbUrl;
 	public String title;
