@@ -27,7 +27,7 @@ import com.yahoo.tomking.gridimagesearch.EndlessScrollListener;
 import com.yahoo.tomking.gridimagesearch.ImageResult;
 import com.yahoo.tomking.gridimagesearch.Settings;
 
-public class ImageSearchActivity extends Activity {
+public class SearchActivity extends Activity {
 	private static final String kRESULT = "result";
 	private static final int kREQUEST_CODE = 0;
 	private static final int kRESULTS_PER_REQUEST = 8;
@@ -46,7 +46,7 @@ public class ImageSearchActivity extends Activity {
 					int position, long id) {
 				// Launch the image display activity
 				// create an intent
-				Intent i = new Intent(ImageSearchActivity.this,
+				Intent i = new Intent(SearchActivity.this,
 						ImageDisplayActivity.class);
 				// Get the image result to display
 				ImageResult result = imageResults.get(position);
@@ -61,7 +61,7 @@ public class ImageSearchActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_image_search);
+		setContentView(R.layout.activity_search);
 		setupViews();
 		setupImageResults();
 		setupSettings();
@@ -133,7 +133,7 @@ public class ImageSearchActivity extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.image_search, menu);
+		getMenuInflater().inflate(R.menu.search, menu);
 		return true;
 	}
 
