@@ -5,19 +5,19 @@ Grid Image Search
 Android project that extends the Google Image Search built during class to allow a user to
 modify advanced search options and result pagination.
 
-Time Spent: 3.75 hours
+Time Spent: 5.00 hours
 
 ## User Stories
 
 ### Mandatory
 1. [X] User can enter a search query that will display a grid of image results from the Google Image API.
-2. [ ] User can click on "settings" which allows selection of advanced search options to filter results
-3. [ ] User can configure advanced search filters such as:
+2. [X] User can click on "settings" which allows selection of advanced search options to filter results
+3. [X] User can configure advanced search filters such as:
     * Size (small, medium, large, extra-large)
     * Color filter (black, blue, brown, gray, green, etc...)
     * Type (faces, photo, clip art, line art)
     * Site (espn.com)
-4. [ ] Subsequent searches will have any filters applied to the search results
+4. [X] _Subsequent_ searches will have any filters applied to the search results
 5. [X] User can tap on any image in results to see the image full-screen
 6. [X] User can scroll down "infinitely" to continue loading more image results (up to 8 pages)
 
