@@ -170,9 +170,7 @@ public class SearchActivity extends Activity {
 		searchUrl.append(buildSiteFilterParameter());
 		searchUrl.append(buildColorFilterParameter());
 		searchUrl.append(buildPageParameter(page));
-		String searchString = searchUrl.toString();
-		// Toast.makeText(this, searchString, Toast.LENGTH_SHORT).show();
-		return searchString;
+		return searchUrl.toString();
 	}
 
 	private String buildResultCountParameter() {
@@ -208,9 +206,7 @@ public class SearchActivity extends Activity {
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if (requestCode == kREQUEST_CODE) {
 			if (resultCode == RESULT_OK) {
-				Settings settings = (Settings) data
-						.getSerializableExtra(Settings.kSETTINGS);
-				this.settings = settings;
+                this.settings = (Settings) data.getSerializableExtra(Settings.kSETTINGS);
 			}
 		}
 	}

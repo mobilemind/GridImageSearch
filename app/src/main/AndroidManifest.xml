@@ -30,7 +30,7 @@
             android:parentActivityName=".SearchActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.yahoo.tomking.gridimagesearch.ImageSearchActivity" />
+                android:value="com.yahoo.tomking.gridimagesearch.SearchActivity" />
         </activity>
         <activity
             android:name="com.yahoo.tomking.gridimagesearch.SettingsActivity"
